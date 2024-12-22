@@ -3,7 +3,10 @@ package _03_cat;
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
-
+public Cat() {
+public static void main(String[] args) {
+}
+}
 		/* Do the following things without changing the Cat class 
 	
 		* Create a CatRunner class in the cat package, with a main method that creates a Cat object.
@@ -18,7 +21,6 @@ package _03_cat;
 
 
 public class Cat {
-
 	private String name;
 	private int lives = 9;
 
