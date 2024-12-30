@@ -8,7 +8,6 @@ public class Pop {
 		wave.putInMicrowave(bag);
 		wave.setTime(34);
 		wave.startMicrowave();
-		bag.
 	}
 
 }
