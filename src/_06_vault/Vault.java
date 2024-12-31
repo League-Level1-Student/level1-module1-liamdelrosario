@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class Vault {
 	private int secret = new Random().nextInt(1000001);
-
+	
 	/**
 	 * Tries to access the vault
 	 * 
