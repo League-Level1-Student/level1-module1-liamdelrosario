@@ -4,15 +4,16 @@ public class Open {
 
 	public static void main(String[] args) {
 		Vault cap = new Vault();
-			cap.tryCode(555777);
-			System.out.println();
-
+			secretAgent bot = new secretAgent();
+		int rob =bot.findCode(cap);
+		if(rob==-1) {
+			System.out.println("No plausible code");
+		}
+		
+				cap.tryCode(rob);
 				
-				
-				
-				
-				
-				
+				System.out.println(rob);
+			
 	}
 
 }

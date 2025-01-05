@@ -8,6 +8,7 @@ import java.util.Random;
  *
  */
 public class Vault {
+
 	private int secret = new Random().nextInt(1000001);
 	
 	/**
@@ -18,5 +19,5 @@ public class Vault {
 	 */
 	public boolean tryCode(int guess) {
 		return guess == secret;
-	}
+		}
 }
