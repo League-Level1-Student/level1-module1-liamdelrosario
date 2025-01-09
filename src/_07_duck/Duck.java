@@ -1,19 +1,23 @@
 package _07_duck;
 
-public class There {
+public class Duck {
 
-	public static void main(String[] args) {
+	
 		// TODO Auto-generated method stub'
 		int numberOfFriends;
 		String favoriteFood;
 		
+		//Duck
 		Duck(String favoriteFood, int numberOfFriends) {
 		       this.favoriteFood = favoriteFood;
 		       this.numberOfFriends = numberOfFriends;
 		}
-	}
+	
 		void quack() {
+			System.out.println("the duck quacks");
 		}
 		void waddle() {
+			System.out.println("The duck waddle its feet");
 		}
+
 }
