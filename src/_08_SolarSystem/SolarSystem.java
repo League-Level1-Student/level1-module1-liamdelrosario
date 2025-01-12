@@ -70,10 +70,10 @@ public class SolarSystem implements GameControlScene {
     Planet mercury = new Planet(5, Color.lightGray, 58, 88,0);
     Planet venus = new Planet(12, Color.yellow, 108, 224,0);
     Planet mars = new Planet(7, Color.orange, 227, 687, 2);
-    Planet jupiter = new Planet(143, Color.white, 778,4331,79);
-    Planet saturn = new Planet(120, Color.red, 1433, 10747,82);
-    Planet uranus = new Planet(51, Color.BLUE, 2872, 30589,27);
-    Planet neptune = new Planet(50, Color.blue,4495,59800,14);
+    Planet jupiter = new Planet(48, Color.white, 300,4331,79);
+    Planet saturn = new Planet(38, Color.red, 380, 10747,82);
+    Planet uranus = new Planet(24, Color.BLUE, 460, 30589,27);
+    Planet neptune = new Planet(22, Color.blue,540,59800,14);
     
     public SolarSystem() {
         gameFrame.setScene(this);

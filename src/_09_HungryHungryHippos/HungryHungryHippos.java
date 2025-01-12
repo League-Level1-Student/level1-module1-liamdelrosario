@@ -47,7 +47,7 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     static final int GAME_BOARD_WIDTH = (2 * GAME_WIDTH) / 3;
     static final int GAME_BOARD_X = -10 +(GAME_WIDTH - GAME_BOARD_WIDTH) / 2;
     static final int GAME_BOARD_Y = 5 + GAME_BOARD_X;
-    static final int NUM_MELONS = 150;
+    static final int NUM_MELONS = 100000;
 
     /*
      * Member variables
@@ -61,7 +61,11 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
      * Create your hippo objects here. The "left" input parameter indicates
      * which side the hippo is drawn.
      */
-    Hippo myHippoObject = new Hippo("left");
+    Hippo lizzie = new Hippo("left", "Lizzie", Color.pink);
+    Hippo henry = new Hippo("up", "Henry", Color.orange);
+    Hippo homer = new Hippo("right", "Homer", Color.green);
+    Hippo harry = new Hippo("down", "Harry", Color.yellow);
+
 
     public HungryHungryHippos() {
         gameFrame.setScene(this);
@@ -96,8 +100,10 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         /*
          * Draw all the hippos here
          */
-        myHippoObject.draw(g);
-        
+        lizzie.draw(g);
+        henry.draw(g);
+        harry.draw(g);
+        homer.draw(g);
         if (startGame) {
             /*
              * Move all the melons
@@ -108,8 +114,15 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
              * Check if a hippo is eating a melon by calling the
              * checkHippoEating(myHippoObject) method. Make sure to do
              * this for all of your hippos!
-             */
-            checkHippoEating(myHippoObject);
+             */            
+           checkHippoEating(lizzie);
+           checkHippoEating(homer);
+           checkHippoEating(henry);
+           checkHippoEating(harry);
+
+
+
+
         }
     }
 
@@ -123,13 +136,13 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         if (keyCode == KeyEvent.VK_S) {
             startGame = true;
         } else if (keyCode == KeyEvent.VK_1) {
-            myHippoObject.eat();
+            lizzie.eat();
         } else if (keyCode == KeyEvent.VK_2) {
-            
+            homer.eat();
         } else if (keyCode == KeyEvent.VK_3) {
-            
+            henry.eat();
         } else if (keyCode == KeyEvent.VK_4) {
-            
+            harry.eat();
         }
     }
     
@@ -161,8 +174,8 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
 
     public void drawMelons(Graphics g) {
         if (melons != null) {
-            for (Melon melon : melons) {
-                melon.draw(g);
+            for (int i = 0 ; i < melons.size(); i++) {
+                melons.get(i).draw(g);
             }
         }
     }

@@ -20,7 +20,8 @@ public class TurfWar extends PApplet {
         int leftKey;
         int downKey;
         int rightKey;
-
+        String player1;
+        String player2;
         /*
          * The member variables below do not need to be initialized in the
          * constructor.
@@ -36,7 +37,8 @@ public class TurfWar extends PApplet {
              * 2. Draw a rectangle to represent the the Player using its color,
              * coordinates and size.
              */
-            
+        	fill(playerColor);
+            rect(x,y, playerSize,playerSize);
         }
 
         void update() {
@@ -50,6 +52,12 @@ public class TurfWar extends PApplet {
              */     
             if (moveUp && y > statsBoardLine) {
                 y-=speed;
+            } else if(moveDown){
+            	y+=speed;
+            }else if(moveRight){
+            	x+=speed;
+            }else if(moveLeft){
+            	x-=speed;
             }
             
             /* 
@@ -129,7 +137,7 @@ public class TurfWar extends PApplet {
     @Override
     public void settings() {
         // 5. Set the size for your sketch. Make it at least 300x300.
-       
+       setSize(900,900);
     }
 
     @Override
@@ -141,8 +149,8 @@ public class TurfWar extends PApplet {
         ((java.awt.Canvas) surface.getNative()).requestFocus();
 
         // 6. Set the background color.
-
-
+        background(255, 0, 98);
+        noStroke();
         // 7. Call the noStroke Method.
         
         
